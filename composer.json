@@ -10,7 +10,8 @@
     "require": {
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.0"
+        "phpunit/phpunit": "^6.0",
+        "satooshi/php-coveralls": "dev-master"
     },
     "autoload":{
     	"psr-4": {"Hug\\": "src/Hug/"}
