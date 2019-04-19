@@ -43,3 +43,7 @@ Use one of these scripts
 ```
 composer exec phpunit
 ```
+
+## Author
+
+Hugo Maugey [visit my website ;)](https://hugo.maugey.fr)

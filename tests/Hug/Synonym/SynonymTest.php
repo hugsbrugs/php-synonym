@@ -24,10 +24,7 @@ final class SynonymTest extends TestCase
      */
     public function testCanFindSynonymWithDefaultLang()
     {
-        $this->assertInternalType(
-            'array',
-            Synonym::find('child')
-        );
+        $this->assertIsArray(Synonym::find('child'));
     }
     
     /**
@@ -35,10 +32,7 @@ final class SynonymTest extends TestCase
      */
     public function testCanFindSynonymWithEnLang()
     {
-        $this->assertInternalType(
-            'array',
-            Synonym::find('child', 'en')
-        );
+        $this->assertIsArray(Synonym::find('child', 'en'));
     }
 
     /**
@@ -46,10 +40,7 @@ final class SynonymTest extends TestCase
      */
     public function testCanFindSynonymWithFrLang()
     {
-        $this->assertInternalType(
-            'array',
-            Synonym::find('enfant', 'fr')
-        );
+        $this->assertIsArray(Synonym::find('enfant', 'fr'));
     }
 
     /**
@@ -57,10 +48,7 @@ final class SynonymTest extends TestCase
      */
     public function testCannotFindSynonymWithUnknownWord()
     {
-        $this->assertInternalType(
-            'array',
-            Synonym::find('coucouillage')
-        );
+        $this->assertIsArray(Synonym::find('coucouillage'));
     }
 
     /**
@@ -68,10 +56,7 @@ final class SynonymTest extends TestCase
      */
     public function testCannotFindSynonymWithWrongInput()
     {
-        $this->assertInternalType(
-            'array',
-            Synonym::find(123456789)
-        );
+        $this->assertIsArray(Synonym::find(123456789));
     }
 
 

@@ -1,7 +1,7 @@
 language: php
 
 php:
- - 7
+ - 7.2
 
 before_script:
  - wget http://getcomposer.org/composer.phar
@@ -10,12 +10,6 @@ before_script:
 script:
  - mkdir -p build/logs
  - phpunit --coverage-clover build/logs/clover.xml
- # - php coverage-checker.php build/logs/clover.xml 75
-
-#after_script:
-# - php vendor/bin/coveralls -v
 
 after_success:
-  # - travis_retry php vendor/bin/coveralls
-  # or enable logging
  - travis_retry php vendor/bin/coveralls -v
